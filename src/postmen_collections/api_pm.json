@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "5eed4aaa-708b-468f-918e-cfb288fd28ea",
+		"name": "New Collection Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23738399"
+	},
+	"item": [
+		{
+			"name": "managers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n           \"name\": \"Manager Name\",\n           \"email\": \"manager@example.com\"\n         }"
+				},
+				"url": {
+					"raw": "localhost:54116/api/v1/managers",
+					"host": [
+						"localhost"
+					],
+					"port": "54116",
+					"path": [
+						"api",
+						"v1",
+						"managers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n           \"name\": \"Manager Name\",\n           \"email\": \"manager@example.com\"\n         }"
+						},
+						"url": {
+							"raw": "localhost:54116/api/v1/managers",
+							"host": [
+								"localhost"
+							],
+							"port": "54116",
+							"path": [
+								"api",
+								"v1",
+								"managers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "94"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5e-XO//oXEoWnctRrP+/gX0AymqBec\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Mar 2024 12:49:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Manager Name\",\n    \"email\": \"manager@example.com\",\n    \"_id\": \"65f1a0e5fd64b39cd9e5c7c1\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "create_project",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n           \"name\": \"Project Name\",\n           \"description\": \"Project Description\",\n           \"startDate\": \"2024-01-01\",\n           \"endDate\": \"2024-12-31\",\n           \"projectManagerId\": \"<PROJECT_MANAGER_ID>\"\n         }"
+				},
+				"url": {
+					"raw": "localhost:54116/api/projects",
+					"host": [
+						"localhost"
+					],
+					"port": "54116",
+					"path": [
+						"api",
+						"projects"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create_project",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n           \"name\": \"Project Name\",\n           \"description\": \"Project Description\",\n           \"startDate\": \"2024-01-01\",\n           \"endDate\": \"2024-12-31\",\n           \"projectManagerId\": \"65f1a0e5fd64b39cd9e5c7c1\"\n         }"
+						},
+						"url": {
+							"raw": "localhost:54116/api/v1/projects",
+							"host": [
+								"localhost"
+							],
+							"port": "54116",
+							"path": [
+								"api",
+								"v1",
+								"projects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "238"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ee-mGTbWNMXR/QKeQT7v6iSWrwvTls\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Mar 2024 13:55:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Project Name\",\n    \"description\": \"Project Description\",\n    \"startDate\": \"2024-01-01T00:00:00.000Z\",\n    \"endDate\": \"2024-12-31T00:00:00.000Z\",\n    \"projectManager\": \"65f1a0e5fd64b39cd9e5c7c1\",\n    \"status\": \"active\",\n    \"_id\": \"65f1b06f1ac9269906713e14\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "get_projects",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:54116/api/v1/projects",
+							"host": [
+								"localhost"
+							],
+							"port": "54116",
+							"path": [
+								"api",
+								"v1",
+								"projects"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "340"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"154-7K6qd33k4Tic+VbU8Y/srVuN8QY\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Mar 2024 13:57:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"projects\": [\n        {\n            \"_id\": \"65f1b06f1ac9269906713e14\",\n            \"name\": \"Project Name\",\n            \"description\": \"Project Description\",\n            \"startDate\": \"2024-01-01T00:00:00.000Z\",\n            \"endDate\": \"2024-12-31T00:00:00.000Z\",\n            \"projectManager\": {\n                \"_id\": \"65f1a0e5fd64b39cd9e5c7c1\",\n                \"name\": \"Manager Name\",\n                \"email\": \"manager@example.com\",\n                \"__v\": 0\n            },\n            \"status\": \"active\",\n            \"__v\": 0\n        }\n    ],\n    \"page\": 1,\n    \"pages\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "task",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n           \"projectId\": \"65f1b06f1ac9269906713e14\",\n           \"title\": \"Task Title\",\n           \"description\": \"Task Description\",\n           \"status\": \"pending\"\n         }"
+						},
+						"url": {
+							"raw": "localhost:54116/api/v1/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "54116",
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "230"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e6-+R1jVnvjaZnd/Fe+AhdJmz5RomM\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Mar 2024 14:01:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"project\": \"65f1b06f1ac9269906713e14\",\n    \"title\": \"Task Title\",\n    \"description\": \"Task Description\",\n    \"status\": \"pending\",\n    \"_id\": \"65f1b1a5ee82e62491b46efd\",\n    \"createdAt\": \"2024-03-13T14:01:09.611Z\",\n    \"updatedAt\": \"2024-03-13T14:01:09.611Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "project_details",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "detils",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:54116/api/v1/projects/65f1b06f1ac9269906713e14",
+							"host": [
+								"localhost"
+							],
+							"port": "54116",
+							"path": [
+								"api",
+								"v1",
+								"projects",
+								"65f1b06f1ac9269906713e14"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "318"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13e-r5Z9oscSBdLUUxowoeYTVFo0NFk\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Mar 2024 14:03:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"project\": {\n        \"_id\": \"65f1b06f1ac9269906713e14\",\n        \"name\": \"Project Name\",\n        \"description\": \"Project Description\",\n        \"startDate\": \"2024-01-01T00:00:00.000Z\",\n        \"endDate\": \"2024-12-31T00:00:00.000Z\",\n        \"projectManager\": {\n            \"_id\": \"65f1a0e5fd64b39cd9e5c7c1\",\n            \"name\": \"Manager Name\",\n            \"email\": \"manager@example.com\",\n            \"__v\": 0\n        },\n        \"status\": \"active\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get_tasks",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "by_project",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:54116/api/v1/tasks?projectId=65f1b06f1ac9269906713e14",
+							"host": [
+								"localhost"
+							],
+							"port": "54116",
+							"path": [
+								"api",
+								"v1",
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "projectId",
+									"value": "65f1b06f1ac9269906713e14"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "261"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"105-cZcOXAZ97SFVAQQFe9XcVBpC6II\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Mar 2024 14:05:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"tasks\": [\n        {\n            \"_id\": \"65f1b1a5ee82e62491b46efd\",\n            \"project\": \"65f1b06f1ac9269906713e14\",\n            \"title\": \"Task Title\",\n            \"description\": \"Task Description\",\n            \"status\": \"pending\",\n            \"createdAt\": \"2024-03-13T14:01:09.611Z\",\n            \"updatedAt\": \"2024-03-13T14:01:09.611Z\",\n            \"__v\": 0\n        }\n    ],\n    \"page\": 1,\n    \"pages\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "update_task",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "update",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n           \"title\": \"Updated Task Title\",\n           \"description\": \"Updated Task Description\",\n           \"status\": \"completed\"\n         }"
+						},
+						"url": {
+							"raw": "localhost:54116/api/v1/tasks/65f1b1a5ee82e62491b46efd",
+							"host": [
+								"localhost"
+							],
+							"port": "54116",
+							"path": [
+								"api",
+								"v1",
+								"tasks",
+								"65f1b1a5ee82e62491b46efd"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "248"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f8-iD9zU7RyuD5ZRGWDo0yZrNoKsww\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Mar 2024 14:07:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"65f1b1a5ee82e62491b46efd\",\n    \"project\": \"65f1b06f1ac9269906713e14\",\n    \"title\": \"Updated Task Title\",\n    \"description\": \"Updated Task Description\",\n    \"status\": \"completed\",\n    \"createdAt\": \"2024-03-13T14:01:09.611Z\",\n    \"updatedAt\": \"2024-03-13T14:01:09.611Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "webhook",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"url\": \"http://localhost:3004/log-event\",\"eventType\":\"projectCreated\"}"
+						},
+						"url": {
+							"raw": "localhost:5000/api/v1/webhooks",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"webhooks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6f-uC3/40mA5YGJV0RUtB+QiuGzexw\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 13 Mar 2024 16:02:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"url\": \"http://localhost:3004/log-event\",\n    \"eventType\": \"projectCreated\",\n    \"_id\": \"65f1cdf968e1c643923e3424\",\n    \"__v\": 0\n}"
+				}
+			]
+		}
+	]
+}
